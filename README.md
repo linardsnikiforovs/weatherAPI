@@ -1,12 +1,12 @@
-#WeatherAPI
+# WeatherAPI
 WeatherAPI is a Go package that provides a simple interface for retrieving weather data for a list of cities. It uses the OpenWeatherMap API to retrieve the data and has a built-in cache to store the results for a given period of time.
 
-##Installation
+## Installation
 To install WeatherAPI, use go get:
 
 ```Code :-go get github.com/[YOUR_USERNAME]/weatherapi```
 
-##Usage
+## Usage
 ```import "github.com/[YOUR_USERNAME]/weatherapi"
 
 api := weatherapi.NewWeatherAPI()
@@ -19,15 +19,15 @@ if err != nil {
 // cities will contain a list of City structs with the weather data for each city
 ```
 
-##API
-###func NewWeatherAPI() *WeatherAPI
+## API
+### func NewWeatherAPI() *WeatherAPI
 NewWeatherAPI creates a new instance of the WeatherAPI.
 
-###func (api *WeatherAPI) GetCitiesWeather(cities []string) ([]City, error)
+### func (api *WeatherAPI) GetCitiesWeather(cities []string) ([]City, error)
 GetCitiesWeather retrieves the weather data for the given list of cities. It returns a slice of City structs containing the name, temperature, and weather conditions for each city. If there is an error retrieving the data, it returns an error.
 
-###Structs
-###type City
+### Structs
+### type City
 City represents a city with its current weather and temperature.
 
 ```type City struct {
@@ -80,13 +80,13 @@ func main() {
 }
 ```
 
-##Configuration
+## Configuration
 The WeatherAPI uses the OpenWeatherMap API to retrieve the weather data. You will need to provide your own API key by setting the apiKey constant in the package. You can obtain an API key by creating a free account on the OpenWeatherMap website.
 
 The WeatherAPI also has a built-in cache to store the results for a given period of time. The cache expiration time can be configured by modifying the parameters passed to the cache.New function in the NewWeatherAPI function.
 
-##Limitations
+## Limitations
 The OpenWeatherMap API has some limitations on the number of requests that can be made per minute. Be sure to read the API documentation to understand the limitations and how to avoid going over the rate limit.
 
-##License
+## License
 WeatherAPI is released under the MIT License. See the LICENSE file for more details.
