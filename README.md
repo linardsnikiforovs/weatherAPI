@@ -37,7 +37,7 @@ City represents a city with its current weather and temperature.
 }
 ```
 
-##Example
+## Example
 Here is an example of how you might use the WeatherAPI to retrieve the weather data for a list of cities and serve it as a JSON API:
 
 ```package main
